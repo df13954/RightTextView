@@ -34,5 +34,6 @@ public class MainActivity extends AppCompatActivity {
     public void remove(View view) {
         //点击按钮,移除右边的图片资源
         mHotView5.setDefRes(-1);
+        //mHotView5.removeRes();
     }
 }

@@ -210,4 +210,10 @@ public class RightTextView extends View {
                 .getResources(), defRes);
         invalidate();
     }
+
+    public void removeRes() {
+        this.defRes = -1;
+        mBitmap = null;
+        invalidate();
+    }
 }
