@@ -1,6 +1,7 @@
 # RightTextView
-实现文字右边...+图片效果
+实现文字右边...+图片效果 
 
+![image](https://github.com/ff-frida/RightTextView/blob/master/app/android-cap22.png)
 ![image](https://github.com/ff-frida/RightTextView/blob/master/android-cap.png)
 
 
