@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
     <com.base.uitextview.RightTextView
         android:layout_width="wrap_content"
@@ -23,15 +21,6 @@
         app:leftTextColor="@color/colorPrimary"
         app:leftTextSize="30sp"
         app:rightRes="@mipmap/ic_launcher" />
-
-    <com.base.uitextview.RightTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        app:leftText="测试长度2342342343哈哈哈42342343哈哈"
-        app:leftTextColor="@color/colorPrimary"
-        app:leftTextSize="30sp"
-        app:rightRes="@drawable/ic_on" />
 
     <com.base.uitextview.RightTextView
         android:id="@+id/hv_view"
@@ -62,7 +51,32 @@
 
     <Button
         android:layout_width="wrap_content"
-        android:text="remove"
+        android:layout_height="wrap_content"
         android:onClick="remove"
-        android:layout_height="wrap_content" />
+        android:text="remove" />
+
+    <com.base.uitextview.MidTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:midLeftText="左边文字"
+        app:midRightText=" | 2019-9-9" />
+
+    <com.base.uitextview.MidTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:midLeftText="左边文字很长123456789"
+        app:midRightText=" | 2019-9-9" />
+
+    <com.base.uitextview.MidTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:midLeftText="左边文字很长123456789左边文字很长123456789"
+        app:midRightText=" | 2019-9-9" />
+
+    <com.base.uitextview.MidTextView
+        android:id="@+id/tv_mid1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
 </LinearLayout>

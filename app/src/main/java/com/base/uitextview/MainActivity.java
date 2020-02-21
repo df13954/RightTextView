@@ -1,6 +1,7 @@
 package com.base.uitextview;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -29,6 +30,14 @@ public class MainActivity extends AppCompatActivity {
         //px 自己转dp
         mHotView5.setSize(90);
         mHotView5.setDefRes(R.drawable.ic_test);
+
+
+        //mid
+        MidTextView mid = findViewById(R.id.tv_mid1);
+        mid.setSize(FontSizeUtils.sp2px(20));
+        mid.setColor(ContextCompat.getColor(this, R.color.colorAccent));
+        mid.setLeftContent("左边文字,Java代码设置");
+        mid.setRightContent("[右边文字代码设置 固定]");
     }
 
     public void remove(View view) {

@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 
 public class MidTextView extends View {
 
+
     private String mContent = "";
     private static final String KEY_DOT = "...";
     private int mWidth;
@@ -28,7 +29,7 @@ public class MidTextView extends View {
         init(null);
     }
 
-    public MidTextView(Context context,   AttributeSet attrs) {
+    public MidTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(attrs);
     }
@@ -44,17 +45,17 @@ public class MidTextView extends View {
         if (attrs != null) {
             TypedArray typedArray = getContext().obtainStyledAttributes(attrs, R.styleable.MidTextView);
             if (typedArray != null) {
-                String c = typedArray.getString(R.styleable.MidTextView_leftText);
+                String c = typedArray.getString(R.styleable.MidTextView_midLeftText);
                 if (!TextUtils.isEmpty(c)) {
                     mContent = c;
                 }
-                String r = typedArray.getString(R.styleable.MidTextView_rightText);
+                String r = typedArray.getString(R.styleable.MidTextView_midRightText);
                 if (!TextUtils.isEmpty(r)) {
                     rightContent = r;
                 }
-                size = typedArray.getDimensionPixelSize(R.styleable.MidTextView_leftTextSize, 50);
+                size = typedArray.getDimensionPixelSize(R.styleable.MidTextView_midLeftTextSize, 50);
 
-                color = typedArray.getColor(R.styleable.MidTextView_leftTextColor, Color.BLACK);
+                color = typedArray.getColor(R.styleable.MidTextView_midLeftTextColor, Color.BLACK);
 
                 typedArray.recycle();
             }
@@ -118,5 +119,32 @@ public class MidTextView extends View {
             }
         }
         canvas.drawText(txt + KEY_DOT + rightContent, 0, baseY, mPaint);
+    }
+
+    public void setLeftContent(String content) {
+        mContent = content;
+        invalidate();
+    }
+
+    public void setRightContent(String rightContent) {
+        this.rightContent = rightContent;
+        invalidate();
+
+    }
+
+
+    public void setSize(int size) {
+        //自己转换
+        this.size = size;
+        mPaint.setTextSize(size);
+        invalidate();
+
+    }
+
+    public void setColor(int color) {
+        this.color = color;
+        mPaint.setColor(color);
+        invalidate();
+
     }
 }
