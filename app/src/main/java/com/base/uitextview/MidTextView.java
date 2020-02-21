@@ -15,6 +15,9 @@ public class MidTextView extends View {
 
 
     private String mContent = "";
+    /**
+     * 有需要可以自定义
+     */
     private static final String KEY_DOT = "...";
     private int mWidth;
     private int mHeight;
@@ -94,7 +97,7 @@ public class MidTextView extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        float baseY = mHeight / 2 + Math.abs(mPaint.ascent() + mPaint.descent()) / 2;
+        float baseY = mHeight / 2f + Math.abs(mPaint.ascent() + mPaint.descent()) / 2;
 
         //计算右边文字宽度
         float rightLen = mPaint.measureText(rightContent);
